@@ -1,8 +1,12 @@
 import styles from './Mole.module.css';
 
-const Mole = () => {
+const Mole = ({shownMole}) => {
+    const styled = shownMole ? {top: '5px'} : {top: '100px'}
     return (
-        <div className={styles.mole}></div>
+        <div 
+            className={styles.mole}
+            style={styled}
+        ></div>
     );
 }
 

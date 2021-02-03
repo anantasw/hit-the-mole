@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import styles from './Soil.module.css';
 
-const Soil = ({children}) => {
+import Mole from '../Mole/Mole';
+
+const Soil = () => {
+    const [shownMole, setShownMole] = useState(false);
+
+    const moleClickedHandler = () => {
+        setShownMole(!shownMole);
+    }
+
     return (
-        <div className={styles.soil}>
-            {children}
+        <div className={styles.soil} onClick={moleClickedHandler}>
+            <Mole shownMole={shownMole} />
         </div>
     );
 }
