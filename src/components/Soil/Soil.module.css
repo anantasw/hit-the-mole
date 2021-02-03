@@ -1,0 +1,17 @@
+.soil {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.soil::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../../assets/images/soil.png) bottom center no-repeat;
+    background-size: 90%;
+    position: absolute;
+    bottom: -10px;
+}
